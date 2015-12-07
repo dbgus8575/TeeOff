@@ -15,86 +15,110 @@
 
     <LinearLayout
         android:id="@+id/hole_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtview_golfinfo"
         android:gravity="center"
-        android:orientation="vertical"
-        app:layout_widthPercent="100%">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9홀" />
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></RadioGroup>
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="18홀" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9홀"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18홀"
+                android:textSize="20dp" />
+
+
+        </RadioGroup>
+
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/course_layout"
-        android:layout_below="@id/hole_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_below="@id/hole_layout"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <LinearLayout
+
+        <CheckBox
+            android:id="@+id/course1_chckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="course1"
+            android:textSize="20dp" />
 
-        <TextView
-            android:text="coursename"
+        <CheckBox
+            android:id="@+id/course2_chckbox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="course2"
+            android:textSize="20dp" />
 
-            </LinearLayout>
-
-        <TextView
-            android:text="coursename"
+        <CheckBox
+            android:id="@+id/course3_chckbox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="course3"
+            android:textSize="20dp" />
 
-        <TextView
-            android:text="coursename"
+        <CheckBox
+            android:id="@+id/course4_chckbox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="course4"
+            android:textSize="20dp" />
 
-        <TextView
-            android:text="coursename"
+        <CheckBox
+            android:id="@+id/course5_chckbox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="course5"
+            android:textSize="20dp" />
 
-        <TextView
-            android:text="coursename"
+        <CheckBox
+            android:id="@+id/course6_chckbox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="course6"
+            android:textSize="20dp" />
 
-        <TextView
-            android:text="coursename"
+        <CheckBox
+            android:id="@+id/course7_chckbox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="coursename"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="coursename"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:text="course7"
+            android:textSize="20dp" />
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_teetime"
+        android:layout_alignBottom="@id/course_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="티타임"/>
+
+    <Button
+        android:id="@+id/btn_signUp_info_Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
 
 </android.support.percent.PercentRelativeLayout>

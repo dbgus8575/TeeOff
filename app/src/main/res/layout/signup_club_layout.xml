@@ -1,35 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
+    tools:showIn="@layout/app_bar_score"
     tools:context=".SignUpClubActivity">
-<EditText
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+
+
     <EditText
-        android:id="@+id/editxt_sesarch"
+        android:id="@+id/edit_clubSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="이름/번호를 입력해주세요"
-        android:layout_weight="1"/>
+        android:hint="통합검색 (골프장명, 지역)"
+        app:layout_widthPercent="70%" />
 
     <Button
-        android:id="@+id/btn_search"
+        android:id="@+id/btn_clubSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="검색"/>
-    </LinearLayout>
-<ListView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/list">
+        android:layout_toRightOf="@id/edit_clubSearch"
+        android:text="검색"
+        app:layout_widthPercent="30%" />
 
-</ListView>
-</LinearLayout>
+
+    <Button
+        android:id="@+id/btn_wholeClub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_clubSearch"
+        android:layout_alignParentLeft="true"
+        android:text="전국 골프장"
+        app:layout_widthPercent="50%"/>
+
+    <Button
+        android:id="@+id/btn_visitClub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_clubSearch"
+        android:layout_alignParentRight="true"
+        android:text="방문 골프장"
+        app:layout_widthPercent="50%"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_wholeClub">
+
+    </ListView>
+
+</android.support.percent.PercentRelativeLayout>

@@ -79,9 +79,9 @@ public class SignUpClubActivity extends AppCompatActivity implements NavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scorecard);
 
-        KeyWordEdit = (EditText) findViewById(R.id.editxt_sesarch);
+        KeyWordEdit = (EditText) findViewById(R.id.edit_clubSearch);
         list = (ListView)findViewById(R.id.list);
-        Button searchB = (Button)findViewById(R.id.btn_search);
+        Button searchB = (Button)findViewById(R.id.btn_clubSearch);
 
         String [] fromColumns = {"golfclub_name_col", "golfclub_address_col", "golfclub_hole_col", "golfclub_type_col"};
         int    [] itemWidget = {R.id.txt_clubname, R.id.txt_address, R.id.txt_hole, R.id.txt_type};
